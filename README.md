@@ -17,3 +17,12 @@ Clone the repository and run:
 ```bash
 flutter pub get
 flutter run
+```
+
+---
+
+## 📚 Documentation
+
+- [Project Structure](docs/project_structure.md)
+- [Extensions](docs/extensions.md)
+- [Commit Message Guidelines](docs/commit_message_guidelines.md)
