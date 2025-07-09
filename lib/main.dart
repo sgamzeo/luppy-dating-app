@@ -7,6 +7,7 @@ import 'package:luppy_dating_app/core/localization/localization_delegates.dart';
 import 'package:luppy_dating_app/core/localization/localization_service.dart';
 import 'package:luppy_dating_app/core/services/cache_box_service.dart';
 import 'package:luppy_dating_app/core/services/getx_manager.dart';
+import 'package:luppy_dating_app/shared/utils/extensions.dart';
 
 void main() async {
   await CacheBoxService.initBoxes();
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           home: LuppyApp(),
           translations: AppLanguages(),
           locale: Get.find<LocalizationService>().getLocale(),
-          theme: ThemeManager.lightTheme,
+          // theme: ThemeManager.darkTheme,
         );
       },
     );
@@ -44,8 +45,16 @@ class LuppyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Scaffold(
-        body: Center(child: Text('Welcome to Luppy Dating App')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              'Welcome to Luppy Dating App',
+              style: context.myTextTheme.buttons,
+            ),
+          ),
+        ],
       ),
     );
   }
