@@ -17,7 +17,7 @@ class OnboardingController extends BaseGetxController {
     ),
     OnboardingPageModel(
       image: AssetConstants.dogCouple,
-      title: LocalizationKeys.startSwipingTextKey,
+      title: LocalizationKeys.startSwipingTextKey.tr,
       description: LocalizationKeys.startSwipingDescriptionTextKey.tr,
     ),
   ];
