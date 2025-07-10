@@ -29,25 +29,11 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           getPages: AppViews.routes,
           initialRoute: AppViews.initial,
-          home: LuppyApp(),
           translations: AppLanguages(),
           locale: Get.find<LocalizationService>().getLocale(),
           theme: ThemeManager.darkTheme,
         );
       },
-    );
-  }
-}
-
-class LuppyApp extends StatelessWidget {
-  const LuppyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: const Scaffold(
-        body: Center(child: Text('Welcome to Luppy Dating App')),
-      ),
     );
   }
 }
