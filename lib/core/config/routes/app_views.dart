@@ -25,7 +25,7 @@ import 'package:luppy_dating_app/features/notifications/notifications_view.dart'
 part 'app_routes.dart';
 
 class AppViews {
-  // static String initial = AppRoutes.splash;
+  static String initial = AppRoutes.onboarding;
 
   static final routes = [
     // core & splash
