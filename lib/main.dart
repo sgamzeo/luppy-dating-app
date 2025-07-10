@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:luppy_dating_app/core/config/routes/app_views.dart';
 import 'package:luppy_dating_app/core/config/theme.dart';
 import 'package:luppy_dating_app/core/localization/localization_delegates.dart';
 import 'package:luppy_dating_app/core/localization/localization_service.dart';
 import 'package:luppy_dating_app/core/services/cache_box_service.dart';
 import 'package:luppy_dating_app/core/services/getx_manager.dart';
-import 'package:luppy_dating_app/shared/utils/extensions.dart';
 
 void main() async {
   await CacheBoxService.initBoxes();
@@ -27,12 +27,12 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          // getPages: AppViews.routes,
-          // initialRoute: AppViews.initial,
+          getPages: AppViews.routes,
+          initialRoute: AppViews.initial,
           home: LuppyApp(),
           translations: AppLanguages(),
           locale: Get.find<LocalizationService>().getLocale(),
-          // theme: ThemeManager.darkTheme,
+          theme: ThemeManager.darkTheme,
         );
       },
     );
@@ -45,16 +45,8 @@ class LuppyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text(
-              'Welcome to Luppy Dating App',
-              style: context.myTextTheme.buttons,
-            ),
-          ),
-        ],
+      body: const Scaffold(
+        body: Center(child: Text('Welcome to Luppy Dating App')),
       ),
     );
   }
