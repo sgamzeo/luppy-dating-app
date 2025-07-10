@@ -23,6 +23,7 @@ flutter run
 
 ## 📚 Documentation
 
-- [Project Structure](docs/project_structure.md)
-- [Extensions](docs/extensions.md)
-- [Commit Message Guidelines](docs/commit_message_guidelines.md)
+- [Project Structure Guide](docs/project_structure_guide.md)
+- [Extensions Guide](docs/extensions_guide.md)
+- [Commit Message Guide](docs/commit_message_guide.md)
+- [Localization Guide](docs/localization_guide.md)
